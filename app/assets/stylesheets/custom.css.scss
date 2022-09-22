@@ -1,4 +1,36 @@
 
+html, body {
+  height: 100%;
+}
+
 .navbar {
-  background: #fdf6ea !important;
+  background: #000 !important;
+}
+
+.nav-link {
+  color: #f1f1f1 !important;
+}
+
+#logo {
+  font-size: 1.7em;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+#jumbotron {
+  background: asset-url("homepagebg.jpg") center no-repeat;
+  background-size: cover;
+  height: 425px;
+  padding: 10px;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background: lightgray;
+}
+
+#sticky-footer {
+  flex-shrink: none;
 }

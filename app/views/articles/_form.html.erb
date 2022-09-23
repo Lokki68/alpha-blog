@@ -1,18 +1,10 @@
 
 <div class="container d-flex flex-column">
 
-  <% if @article.errors.any? %>
-    <h2>The following errors prevented the article form being save</h2>
-    <ul>
-      <% @article.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-
-  <% end %>
-
   <div class="row justify-content-center">
     <div class="col-10">
+      <%= render 'shared/errors' %>
+
       <%= form_with(model: @article, data: { turbo: false }, class: "shadow p-3 mb-3 bg-secondary rounded", local: true) do |f| %>
         <div class="form-group row m-2">
           <%= f.label :title, class: "col-2 col-form-label text-light" %>
